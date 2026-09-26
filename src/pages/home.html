@@ -1,4 +1,120 @@
-<section>
-	Hello World!
-	<a href="/test"> To test the router, click here to go to the test page. </a>
-</section>
+<div id="bar"></div>
+<div class="wrap">
+  <header class="hero">
+    <div class="stamp"><span>ОК 11 · Інтерактивний курс</span></div>
+    <h1>Основи програмування мовою Python</h1>
+    <p class="sub">Сучасний навчальний веб-курс для початківців: від першого рядка коду та базових типів даних до обчислень, форматованого виводу та обробки помилок.</p>
+    
+    <div class="hero-actions">
+      <a href="/lectures" class="btn-primary">Переглянути список лекцій →</a>
+      <a href="/lectures/1" class="btn-secondary">Почати з Лекції 1</a>
+    </div>
+
+    <dl class="specs">
+      <div><dt>Змістовий модуль</dt><dd>1 · Основи програмування</dd></div>
+      <div><dt>Мова прикладів</dt><dd>Python 3.12</dd></div>
+      <div><dt>Доступно лекцій</dt><dd>2 інтерактивні лекції</dd></div>
+      <div><dt>Формат</dt><dd>Теорія + Код + Тести</dd></div>
+    </dl>
+  </header>
+
+  <main>
+    <section>
+      <span class="snum">КЛЮЧОВІ ПЕРЕВАГИ</span>
+      <h2>Особливості інтерактивного навчання</h2>
+      <p>Цей курс розроблений для максимального занурення у вивчення Python за допомогою сучасних веб-технологій.</p>
+
+      <div class="pil">
+        <article>
+          <h4>⚡ Інтерактивний запуск коду</h4>
+          <p>Запускайте та перевіряйте результати виконання програм Python безпосередньо у матеріалах лекцій.</p>
+          <p class="an"><b>Наочність</b>Консольний вивід і результати з'являються миттєво під кожним прикладом.</p>
+        </article>
+
+        <article>
+          <h4>🔍 Анатомія синтаксису</h4>
+          <p>Клікабельні елементи коду дозволяють розібрати кожен символ, функцію чи літерал у подробицях.</p>
+          <p class="an"><b>Інтерактивність</b>Отримуйте точні підказки про типи даних і призначення конструкцій.</p>
+        </article>
+
+        <article>
+          <h4>🎯 Вікторини для самоперевірки</h4>
+          <p>Підсумкові онлайн-тести в кінці кожної лекції з вичерпним аналізом та підказками до варіантів.</p>
+          <p class="an"><b>Контроль знань</b>Миттєвий розрахунок балів і можливість повторного проходження.</p>
+        </article>
+
+        <article>
+          <h4>📋 Глосарій та чек-листи</h4>
+          <p>Зручний пошук термінів у словнику та чек-листи для контролю засвоєння практичних навичок.</p>
+          <p class="an"><b>Самоорганізація</b>Ваш прогрес у чек-листах зберігається автоматично.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <span class="snum">КАТАЛОГ КУРСУ</span>
+      <h2>Доступні лекції</h2>
+      <p>Оберіть потрібну лекцію для вивчення матеріалу або швидкого повторення тем.</p>
+
+      <div class="lecture-grid">
+        <div class="card-item">
+          <div>
+            <span class="stamp">Лекція 01</span>
+            <h3>1. Перша чашка Python</h3>
+            <p>Як комп'ютер виконує програму, встановлення Python і VS Code, перша програма, змінні та чотири базові типи даних — з прикладами, які можна запустити просто тут.</p>
+            <div class="tag-list">
+              <span class="tag">Програма й інтерпретатор</span>
+              <span class="tag">PEP 8</span>
+              <span class="tag">Змінні</span>
+              <span class="tag">int, float, str, bool</span>
+            </div>
+          </div>
+          <a href="/lectures/1" class="btn-primary">Читати Лекцію 1 →</a>
+        </div>
+
+        <div class="card-item">
+          <div>
+            <span class="stamp">Лекція 02</span>
+            <h3>2. Рахунок у кав'ярні</h3>
+            <p>Арифметичні та логічні вирази, пріоритет операцій, введення з клавіатури, форматований вивід і try-except — усі приклади можна запустити просто тут.</p>
+            <div class="tag-list">
+              <span class="tag">Вирази й арифметика</span>
+              <span class="tag">input()</span>
+              <span class="tag">f-strings</span>
+              <span class="tag">try-except</span>
+            </div>
+          </div>
+          <a href="/lectures/2" class="btn-primary">Читати Лекцію 2 →</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="snum">ПРИКЛАД З КУРСУ</span>
+      <h2>Спробуйте інтерактивний код</h2>
+      <p>Нижче наведено приклад з Лекції 2: розрахунок вартості замовлення у кав'ярні за допомогою форматованих рядків <code>f-string</code>.</p>
+
+      <div class="code">
+        <div class="fname">demo_bill.py</div>
+        <pre><span class="c"># Обчислення вартості кави</span>
+<span class="n">price</span> = <span class="m">55.0</span>
+<span class="n">cups</span> = <span class="m">2</span>
+<span class="n">total</span> = <span class="n">price</span> * <span class="n">cups</span>
+
+<span class="t">print</span>(<span class="s">f"Кількість чашок: {cups}"</span>)
+<span class="t">print</span>(<span class="s">f"Сума до сплати: {total:.2f} грн"</span>)</pre>
+      </div>
+      <div class="runbar">
+        <button class="btn" data-run="out-demo">▶ Запустити код</button>
+      </div>
+      <div class="out" id="out-demo" hidden>Кількість чашок: 2
+Сума до сплати: 110.00 грн
+<span class="cm">Process finished with exit code 0</span></div>
+    </section>
+
+    <footer>
+      <p>Основи програмування (Python) (ОК 11) · Змістовий модуль 1</p>
+      <p>Усі приклади коду адаптовані для Python 3.12+.</p>
+    </footer>
+  </main>
+</div>
