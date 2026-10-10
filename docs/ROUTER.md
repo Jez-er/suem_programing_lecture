@@ -34,7 +34,8 @@ suem_programing_lecture/
 │   │   └── lectures/
 │   │       ├── index.html    <-- Lectures catalog / list page template
 │   │       ├── Lection_1.html <-- Lecture 1 template
-│   │       └── Lection_2.html <-- Lecture 2 template
+│   │       ├── Lection_2.html <-- Lecture 2 template
+│   │       └── Lection_3.html <-- Lecture 3 template
 │   └── router/
 │       ├── router.ts         <-- Main Router engine & event handler
 │       └── routerList.ts     <-- Route registry & template definitions
@@ -60,17 +61,18 @@ import homeHtml from '../pages/home.html?raw'
 import lecturesIndexHtml from '../pages/lectures/index.html?raw'
 import lection1Html from '../pages/lectures/Lection_1.html?raw'
 import lection2Html from '../pages/lectures/Lection_2.html?raw'
-import testHtml from '../pages/test.html?raw'
+import lection3Html from '../pages/lectures/Lection_3.html?raw'
 
 export const routerList: RouterList[] = [
   { path: '/', template: homeHtml },
   { path: '/lectures', template: lecturesIndexHtml },
   { path: '/lectures/1', template: lection1Html },
   { path: '/lectures/2', template: lection2Html },
+  { path: '/lectures/3', template: lection3Html },
   // Route Aliases
   { path: '/lecture/1', template: lection1Html },
   { path: '/lecture/2', template: lection2Html },
-  { path: '/test', template: testHtml },
+  { path: '/lecture/3', template: lection3Html },
 ]
 ```
 
@@ -78,20 +80,20 @@ export const routerList: RouterList[] = [
 
 ## 🚀 4. How to Add a New Route (Step-by-Step)
 
-To add a new page (e.g., **Lecture 3** at `/lectures/3`):
+To add a new page (e.g., **Lecture 4** at `/lectures/4`):
 
 ### Step 1: Create the HTML Template
-Create a new HTML file in `src/pages/lectures/Lection_3.html`:
+Create a new HTML file in `src/pages/lectures/Lection_4.html`:
 ```html
 <div id="bar"></div>
 <div class="wrap">
   <header class="hero">
-    <div class="stamp"><span>ОК 11 · Лекція 03</span></div>
-    <h1>3. Умовні оператори та розгалуження</h1>
+    <div class="stamp"><span>ОК 11 · Лекція 04</span></div>
+    <h1>4. Цикли for та while</h1>
   </header>
   <main>
     <section id="s1">
-      <h2>Розділ 1. Конструкція if-elif-else</h2>
+      <h2>Розділ 1. Цикл for</h2>
       <p>Контент лекції...</p>
     </section>
   </main>
@@ -102,24 +104,24 @@ Create a new HTML file in `src/pages/lectures/Lection_3.html`:
 Open `src/router/routerList.ts`:
 1. Import the template with `?raw`:
    ```typescript
-   import lection3Html from '../pages/lectures/Lection_3.html?raw'
+   import lection4Html from '../pages/lectures/Lection_4.html?raw'
    ```
 2. Add the route object to `routerList`:
    ```typescript
    export const routerList: RouterList[] = [
      // ... existing routes
-     { path: '/lectures/3', template: lection3Html },
-     { path: '/lecture/3', template: lection3Html }, // Alias
+     { path: '/lectures/4', template: lection4Html },
+     { path: '/lecture/4', template: lection4Html }, // Alias
    ]
    ```
 
 ### Step 3: Link to the New Page
 Add a standard link in any page template:
 ```html
-<a href="/lectures/3" class="btn-primary">Читати Лекцію 3 →</a>
+<a href="/lectures/4" class="btn-primary">Читати Лекцію 4 →</a>
 ```
 
-The router will automatically intercept the click, push `/lectures/3` to browser history, and render `Lection_3.html` without reloading the browser!
+The router will automatically intercept the click, push `/lectures/4` to browser history, and render `Lection_4.html` without reloading the browser!
 
 ---
 
